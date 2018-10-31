@@ -9,11 +9,14 @@ import { Subscription } from 'rxjs';
 export class FooterComponent implements OnInit {
     private subscription: Subscription;
     message: any;
+    today:Date= new Date();
 
-    constructor() { }
+    constructor() { 
+        
+    }
 
     ngOnInit() {
-       
+    
     }
 
 }
