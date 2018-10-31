@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -34,7 +35,10 @@ module.exports = {
             config: JSON.stringify({
                 apiUrl: 'http://localhost:4000'
             })
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: 'src/assets', to: 'assets'}
+        ]), 
     ],
     optimization: {
         splitChunks: {

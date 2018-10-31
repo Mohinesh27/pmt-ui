@@ -1,4 +1,4 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
+<!-- <h1>Hi {{currentUser.firstName}}!</h1>
 <p>You're logged in with Angular 7!!</p>
 <h3>All registered users:</h3>
 <ul>
@@ -6,4 +6,20 @@
         {{user.username}} ({{user.firstName}} {{user.lastName}})
         - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
     </li>
-</ul>
+</ul> -->
+
+<pmt-sidebar></pmt-sidebar>
+
+<div id="right-panel" class="right-panel">
+    <pmt-header></pmt-header>
+    <div class="content">
+        <div class="animated fadeIn">
+            
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <pmt-footer></pmt-footer>
+</div>

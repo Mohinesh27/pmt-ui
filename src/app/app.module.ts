@@ -4,7 +4,7 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
-import { fakeBackendProvider } from './helpers';
+// import { fakeBackendProvider } from './helpers';
 
 import { AppComponent }  from './app.component';
 import { routing }        from './app.routing';
@@ -14,6 +14,7 @@ import { JwtInterceptor, ErrorInterceptor } from './helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { HeaderComponent,FooterComponent,SidebarComponent} from './layout';
 
 @NgModule({
     imports: [
@@ -27,14 +28,17 @@ import { RegisterComponent } from './register';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        HeaderComponent,
+        FooterComponent,
+        SidebarComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
         // provider used to create fake backend
-        fakeBackendProvider
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })
