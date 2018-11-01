@@ -3,6 +3,14 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from './services';
 import { User } from './models';
+import {
+    trigger,
+    state,
+    style,
+    animate,
+    transition,
+    // ...
+  } from '@angular/animations';
 
 @Component({ selector: 'app', templateUrl: 'app.component.html' })
 export class AppComponent {
